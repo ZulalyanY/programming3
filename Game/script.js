@@ -1,3 +1,4 @@
+
 function generator(matLen, gr, grEat, grGiant, grStone, grFox) {
     let matrix = [];
     for (let i = 0; i < matLen; i++) {

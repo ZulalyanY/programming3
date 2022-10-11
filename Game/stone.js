@@ -1,4 +1,5 @@
-class GrassStone {
+var LivingCreature = require("./LivingCreature")
+module.exports = class GrassStone {
     constructor(x, y) {
         super(x, y)
         this.directions = [

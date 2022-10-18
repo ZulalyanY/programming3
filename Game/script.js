@@ -1,62 +1,11 @@
+var socket = io()
 
-function generator(matLen, gr, grEat, grGiant, grStone, grFox) {
-    let matrix = [];
-    for (let i = 0; i < matLen; i++) {
-        matrix[i] = [];
-        for (let j = 0; j < matLen; j++) {
-            matrix[i][j] = 0;
-        }
-    }
-    for (let i = 0; i < gr; i++) {
-        let x = Math.floor(Math.random() * matLen);
-        let y = Math.floor(Math.random() * matLen);
-        if (matrix[x][y] == 0) {
-            matrix[x][y] = 1;
-        }
-    }
-    for (let i = 0; i < grEat; i++) {
-        let x = Math.floor(Math.random() * matLen);
-        let y = Math.floor(Math.random() * matLen);
-        if (matrix[x][y] == 0) {
-            matrix[x][y] = 2;
-        }
-    }
-    for (let i = 0; i < grGiant; i++) {
-        let x = 0
-        let y = Math.floor(Math.random() * matLen);
-        if (matrix[x][y] == 0) {
-            matrix[x][y] = 3;
-        }
-    }
-    for (let i = 0; i < grStone; i++) {
-        let x = Math.floor(Math.random() * matLen);
-        let y = Math.floor(Math.random() * matLen);
-        if (matrix[x][y] == 0) {
-            matrix[x][y] = 4
-        }
-    }
-    for (let i = 0; i < grFox; i++) {
-        let x = Math.floor(Math.random() * matLen);
-        let y = 0
-        if (matrix[x][y] == 0) {
-            matrix[x][y] = 5
-        }
-    }
-    return matrix;
-}
-let side = 20;
-
-let matrix = generator(30, 30, 15, 7, 15, 6);
-let grassArr = []
-let grassEaterArr = []
-let grassGiantArr = []
-let grassStoneArr = []
-let grassFoxArr = []
+let side = 20
 
 function setup() {
     createCanvas(matrix[0].length * side, matrix.length * side);
     background('#acacac');
-    frameRate(5)
+   
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {

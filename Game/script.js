@@ -1,9 +1,9 @@
 var socket = io()
 
-let side = 20
+var side = 20
 
 function setup() {
-    createCanvas(matrix[0].length * side, matrix.length * side);
+    createCanvas();
     background('#acacac');
    
     for (var y = 0; y < matrix.length; y++) {

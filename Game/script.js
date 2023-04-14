@@ -54,7 +54,7 @@ function draw() {
             rect(x * side, y * side, side, side);
         }
     }
-///./ysdgwuyt
+///./ysdgwuytfregregrege
 
     for (let i in grassArr) {
         grassArr[i].mul()

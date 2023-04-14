@@ -69,3 +69,9 @@ grassEaterArr = []
 grassGiantArr = []
 grassStoneArr = []
 grassFoxArr = []
+
+Grass  = require("./grass")
+Eater  = require("./eater")
+Fox = require("./fox")
+Geant = require("./geant")
+/* Stone = require("./stone") */

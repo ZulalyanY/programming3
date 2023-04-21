@@ -3,25 +3,26 @@ var socket = io()
 var side = 20
 
 function setup() {
-    createCanvas();
+    createCanvas(25 * side, 25 * side);
+
     background('#acacac');
    
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
             if (matrix[y][x] == 1) {
-                let gr = new Grass(x, y)
+                var gr = new Grass(x, y)
                 grassArr.push(gr)
             } else if (matrix[y][x] == 2) {
-                let gr = new GrassEater(x, y)
+                var gr = new GrassEater(x, y)
                 grassEaterArr.push(gr)
             } else if (matrix[y][x] == 3) {
-                let gr = new GrassGiant(x, y)
+                var gr = new GrassGiant(x, y)
                 grassGiantArr.push(gr)
             } else if (matrix[y][x] == 4) {
-                let gr = new GrassStone(x, y)
+                var gr = new GrassStone(x, y)
                 grassStoneArr.push(gr)
             } else if (matrix[y][x] == 5) {
-                let gr = new GrassFox(x, y)
+                var gr = new GrassFox(x, y)
                 grassFoxArr.push(gr)
             }
         }
@@ -29,9 +30,9 @@ function setup() {
 
 
 }
-function draw() {
-    for (let y = 0; y < matrix.length; y++) {
-        for (let x = 0; x < matrix[y].length; x++) {
+function nkarel(matrix) {
+    for (var y = 0; y < matrix.length; y++) {
+        for (var x = 0; x < matrix[y].length; x++) {
 
             if (matrix[y][x] == 1) {
                 fill(155, 241, 164);
@@ -54,22 +55,25 @@ function draw() {
             rect(x * side, y * side, side, side);
         }
     }
-///./ysdgwuytfregregrege
 
-    for (let i in grassArr) {
+    for (var i in grassArr) {
         grassArr[i].mul()
     }
-    for (let j in grassEaterArr) {
+    for (var j in grassEaterArr) {
         grassEaterArr[j].mul()
         grassEaterArr[j].eat()
     }
-    for (let k in grassGiantArr) {
+    for (var k in grassGiantArr) {
         grassGiantArr[k].clearField()
     }
-    for (let l in grassStoneArr) {
+    for (var l in grassStoneArr) {
+
+      //grassStoneArr[l].clearField()
     }
-    for (let s in grassFoxArr) {
+    for (var s in grassFoxArr) {
         grassFoxArr[s].clearField()
     }
 }
+
+///socket.on("send matrix", matrix)
 

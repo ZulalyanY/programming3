@@ -1,31 +1,129 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
-}
-
-
-
-.logo{
-  width: 82px;
-  height: 82px;
-  margin: 0px 1850px 0px 35px;
-}
-
-
-.topnav  {
+  }
+  /* header ---------- */
+  .topnav  {
+    width: 100%;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom right, #a7c0ee 14%, #6abcec 100%);
+    overflow: hidden; 
+    position: fixed; 
+    display: flex;
+  }
+  .topnav a {
+    margin: 10px 5px 0px 0px;
+    padding: 20px 20px 0px 0px;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  header ul{
+    display: flex;
   justify-content: flex-end;
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;
-}
+  }
   
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+  .logonk{
+    width: 90px;
+    height: 90px;
+    margin: 0px 1550px 0px 0px;
+    padding: auto;
+    list-style-type: none;
+  }
+  .glav{
+    margin: 10px 10px 10px 120px ;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .galery{
+    margin: auto;
+    padding: 15px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galery1{
+    margin: auto;
+    padding: 15px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+  }
   
- */
+  .home{
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  li{
+    list-style-type: none;
+  }
+ 
+  span{
+    color: rgb(94, 76, 95);
+    font-size: 30px;
+    
+  }
+  
+  .foodimg{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px 5px 0px;
+    display: flex;
+    justify-content:right;
+    position: relative;
+    bottom: auto;
+  }
+  
+  .cont{
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  input{
+    width: 350px;
+    height: 30px;
+    margin: 15px 15px 15px 15px;
+  }
+  .butt{
+    width: 50px;
+    height: 30px;
+    margin: 15px 15px 15px 15px;
+    color: black;
+    background: linear-gradient(to bottom right, #a7c0ee 14%, #44b4f5 100%);
+    font-family: 'Raleway', sans-serif;
+    border-bottom-color: none;
+  }
+  
+  /* footer_______________ */
+  .dis{
+    margin: auto;
+    padding: auto;
+    justify-content: flex-end;
+  }
+  
+  footer {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background: linear-gradient(to bottom right, #a7c0ee 14%, #44b4f5 100%);
+    color: white;
+  }
+  .foott{
+    margin: 20px 0px 0px 5px ;
+    display: flex;
+  }
+  
+  

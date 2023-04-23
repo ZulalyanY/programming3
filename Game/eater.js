@@ -1,4 +1,3 @@
-const { floor } = require("lodash");
 var LivingCreature = require("./LivingCreature")
 module.exports = class GrassEater  extends LivingCreature{
     constructor(x, y) {
@@ -22,7 +21,7 @@ module.exports = class GrassEater  extends LivingCreature{
     chooseCell(character) {
         this.getNewCoordinates()
        super.chooseCell(character)
-        return found;
+      
     }
 
     mul() {

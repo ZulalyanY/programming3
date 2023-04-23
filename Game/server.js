@@ -63,8 +63,21 @@ function generator(matLen, gr, grEat, grGiant, grStone, grFox) {
 
 matrix = generator(30, 30, 15, 7, 15, 6);
 
-////io.sockets.emit("send matrix", matrix)
+io.sockets.emit("send matrix", matrix)
 
+grassArr = []
+grassEaterArr = []
+grassGiantArr = []
+grassStoneArr = []
+grassFoxArr = []
+
+
+
+Grass = require("./grass")
+GrassEater = require("./eater")
+GrassFox = require("./fox")
+GrassGiant = require("./geant")
+GrassStone = require("./stone")
 
 
 
@@ -95,22 +108,30 @@ function createObject() {
 }
 
 
-grassArr = []
-grassEaterArr = []
-grassGiantArr = []
-grassStoneArr = []
-grassFoxArr = []
 
+function game() {
+    for (var i in grassArr) {
+        grassArr[i].mul()
+    }
+    for (var j in grassEaterArr) {
+        grassEaterArr[j].mul()
+        grassEaterArr[j].eat()
+    }
+    for (var k in grassGiantArr) {
+        grassGiantArr[k].clearField()
+    }
+    for (var l in grassStoneArr) {
+        grassStoneArr[l].clearField()
+    }
+    for (var s in grassFoxArr) {
+        grassFoxArr[s].clearField()
+    }
+    io.sockets.emit("send matrix", matrix)
+}
 
-
-Grass = require("./grass")
-Eater = require("./eater")
-Fox = require("./fox")
-Geant = require("./geant")
-Stone = require("./stone")
-
-
+setInterval(game, 300)
 
 io.on("connection", function () {
     createObject()
 })
+

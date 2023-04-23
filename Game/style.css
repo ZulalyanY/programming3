@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
   }
-  /* header ---------- */
   .topnav  {
     width: 100%;
     justify-content: flex-end;
@@ -20,7 +19,7 @@
     text-decoration: none;
     font-size: 18px;
   }
-  
+
   header ul{
     display: flex;
   justify-content: flex-end;
@@ -40,30 +39,7 @@
     display: flex;
     justify-content: space-around;
   }
-  .galery{
-    margin: auto;
-    padding: 15px;
-    width: 1200px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  .galery1{
-    margin: auto;
-    padding: 15px;
-    width: 1400px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
-  }
-  
-  .home{
-    margin: auto;
-    padding: auto;
-    display: flex;
-    justify-content: center;
-  }
-  
+
   
   li{
     list-style-type: none;
@@ -97,17 +73,7 @@
     height: 30px;
     margin: 15px 15px 15px 15px;
   }
-  .butt{
-    width: 50px;
-    height: 30px;
-    margin: 15px 15px 15px 15px;
-    color: black;
-    background: linear-gradient(to bottom right, #a7c0ee 14%, #44b4f5 100%);
-    font-family: 'Raleway', sans-serif;
-    border-bottom-color: none;
-  }
-  
-  /* footer_______________ */
+
   .dis{
     margin: auto;
     padding: auto;
@@ -125,5 +91,9 @@
     margin: 20px 0px 0px 5px ;
     display: flex;
   }
-  
-  
+  .all{
+    margin: 150px;
+    justify-content: center;
+margin-top: center;
+display: flex-end;
+  }

@@ -14,8 +14,8 @@ module.exports = class GrassFox extends LivingCreature {
 
     chooseCell(character) {
         this.getNewCoordinates()
-        super.chooseCell(character)
-        return found;
+       return super.chooseCell(character)
+        
     }
 
     mul() {

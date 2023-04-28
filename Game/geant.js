@@ -13,8 +13,8 @@ module.exports = class GrassGiant extends LivingCreature {
     /* chooseCell------------------ */
     chooseCell(character) {
         this.getNewCoordinates()
-        super.chooseCell(character)
-        return found;
+         return super.chooseCell(character)
+       
     }
     clearField() {
         this.multiply++

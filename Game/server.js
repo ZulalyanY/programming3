@@ -4,6 +4,7 @@ var server = require("http").Server(app)
 var io = require("socket.io")(server)
 
 var fs = require("fs")
+
 app.use(express.static("."))
 
 app.get("/", function (req, res) {
@@ -120,16 +121,27 @@ function game() {
     for (var k in grassGiantArr) {
         grassGiantArr[k].clearField()
     }
-    for (var l in grassStoneArr) {
-        grassStoneArr[l].clearField()
-    }
+
     for (var s in grassFoxArr) {
         grassFoxArr[s].clearField()
     }
     io.sockets.emit("send matrix", matrix)
 }
 
-setInterval(game, 300)
+setInterval(game,300)
+
+var statistics = {}
+
+setInterval (function (){
+    statistics.grass =  grassArr.length
+    statistics.GrassEater = grassEaterArr.length
+    statistics.GrassFox = grassFoxArr.length
+    statistics.GrassGiant = grassGiantArr.length
+    statistics.GrassStone = grassStoneArr.length
+    fs.writeFile("statistics.json", JSON.stringify(statistics), function(){
+        console.log("statistics")
+    })
+}, 1000)
 
 io.on("connection", function () {
     createObject()

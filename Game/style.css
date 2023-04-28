@@ -7,7 +7,7 @@
     justify-content: flex-end;
     background: linear-gradient(to bottom right, #a7c0ee 14%, #6abcec 100%);
     overflow: hidden; 
-    position: fixed; 
+   /*  position: fixed;  */
     display: flex;
   }
   .topnav a {
@@ -33,7 +33,7 @@
     list-style-type: none;
   }
   .glav{
-    margin: 10px 10px 10px 120px ;
+    margin: 10px 10px 10px 200px ;
     width: 300px;
     height: 300px;
     display: flex;
@@ -47,7 +47,7 @@
  
   span{
     color: rgb(94, 76, 95);
-    font-size: 30px;
+    font-size: 60px;
     
   }
   
@@ -70,7 +70,7 @@
   }
   input{
     width: 350px;
-    height: 30px;
+    height: 60px;
     margin: 15px 15px 15px 15px;
   }
 
@@ -91,9 +91,83 @@
     margin: 20px 0px 0px 5px ;
     display: flex;
   }
-  .all{
-    margin: 150px;
-    justify-content: center;
-margin-top: center;
-display: flex-end;
-  }
+
+.buttons{
+  margin: 70px;
+  display: flex;
+  width: 40% ;
+  justify-content: space-evenly;
+  display: flex;
+
+}
+
+
+.button1:hover {
+  background-color: rgb(247, 218, 223); 
+  color: white;
+}
+.button2:hover {
+  background-color: rgb(210, 244, 159); 
+  color: white;
+}
+.button3:hover {
+  background-color: rgb(247, 207, 134); 
+  color: white;
+}
+.button4:hover {
+  background-color:  rgb(230, 238, 252); 
+  color: white;
+}
+
+
+.button1{
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  color: #b54eb3;
+  border-radius: 30%;
+  transition-duration: 0.4s;
+  background-color: white;
+  border: 2px solid rgb(247, 218, 223)
+
+}
+.button2{
+  width: 200px;
+  height: 60px;
+  background-color: rgb(210, 244, 159);
+  font-size: 30px;
+  color: #328940;
+  border-radius: 30%;
+  transition-duration: 0.4s;
+  background-color: white;
+  border: 2px solid rgb(210, 244, 159);
+
+
+}
+.button3{  
+  width: 200px;
+  height: 60px;
+  background-color: rgb(247, 207, 134);
+  font-size: 30px;
+  color: #ad8823;
+  border-radius: 30%;
+  transition-duration: 0.4s;
+  background-color: white;
+
+  border: 2px solid rgb(247, 207, 134);
+
+
+
+}
+.button4{
+  width: 200px;
+  height: 60px;
+  background-color: rgb(230, 238, 252);
+  font-size: 30px;
+  color: #3d5f9f;
+  border-radius: 30%;
+  transition-duration: 0.4s;
+  background-color: white;
+  border: 2px solid rgb(230, 238, 252);
+  
+}

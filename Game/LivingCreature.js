@@ -24,15 +24,15 @@ module.exports = class LivingCreature {
             var y = this.directions[i][1];
 
             if (y >= 0 && y < matrix[0].length && x >= 0 && y < matrix.length) {
-                
+
                 if (matrix[y][x] == character) {
                     found.push(this.directions[i]);
                 }
             }
         }
-        
+
         return found;
     }
-    
- 
+
+
 }

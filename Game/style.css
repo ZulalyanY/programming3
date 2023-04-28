@@ -1,101 +1,104 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  .topnav  {
-    width: 100%;
-    justify-content: flex-end;
-    background: linear-gradient(to bottom right, #a7c0ee 14%, #6abcec 100%);
-    overflow: hidden; 
-   /*  position: fixed;  */
-    display: flex;
-  }
-  .topnav a {
-    margin: 10px 5px 0px 0px;
-    padding: 20px 20px 0px 0px;
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  header ul{
-    display: flex;
+.topnav {
+  width: 100%;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom right, #a7c0ee 14%, #6abcec 100%);
+  overflow: hidden;
+  display: flex;
+}
+
+.topnav a {
+  margin: 10px 5px 0px 0px;
+  padding: 20px 20px 0px 0px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logonk {
+  width: 90px;
+  height: 90px;
+  margin-right: 120px;
+  list-style-type: none;
+}
+
+.glav {
+  margin: 10px 10px 10px 200px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+span {
+  color: rgb(94, 76, 95);
+  font-size: 60px;
+
+}
+
+.foodimg {
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px 5px 0px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  bottom: auto;
+}
+
+.cont {
+  margin: auto;
+  padding: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 350px;
+  height: 60px;
+  margin: 15px 15px 15px 15px;
+}
+
+.dis {
+  margin: auto;
+  padding: auto;
   justify-content: flex-end;
-  }
-  
-  .logonk{
-    width: 90px;
-    height: 90px;
-    margin: 0px 1550px 0px 0px;
-    padding: auto;
-    list-style-type: none;
-  }
-  .glav{
-    margin: 10px 10px 10px 200px ;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-  }
+}
 
-  
-  li{
-    list-style-type: none;
-  }
- 
-  span{
-    color: rgb(94, 76, 95);
-    font-size: 60px;
-    
-  }
-  
-  .foodimg{
-    width: 50px;
-    height: 50px;
-    margin: 0px 10px 5px 0px;
-    display: flex;
-    justify-content:right;
-    position: relative;
-    bottom: auto;
-  }
-  
-  .cont{
-    margin: auto;
-    padding: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  input{
-    width: 350px;
-    height: 60px;
-    margin: 15px 15px 15px 15px;
-  }
+footer {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  background: linear-gradient(to bottom right, #a7c0ee 14%, #44b4f5 100%);
+  color: white;
+}
 
-  .dis{
-    margin: auto;
-    padding: auto;
-    justify-content: flex-end;
-  }
-  
-  footer {
-    display: block;
-    text-align: center;
-    padding: 5px;
-    background: linear-gradient(to bottom right, #a7c0ee 14%, #44b4f5 100%);
-    color: white;
-  }
-  .foott{
-    margin: 20px 0px 0px 5px ;
-    display: flex;
-  }
+.foott {
+  margin: 20px 0px 0px 5px;
+  display: flex;
+}
 
-.buttons{
+.buttons {
   margin: 70px;
   display: flex;
-  width: 40% ;
+  width: 40%;
   justify-content: space-evenly;
   display: flex;
 
@@ -103,24 +106,27 @@
 
 
 .button1:hover {
-  background-color: rgb(247, 218, 223); 
+  background-color: rgb(247, 218, 223);
   color: white;
 }
+
 .button2:hover {
-  background-color: rgb(210, 244, 159); 
+  background-color: rgb(210, 244, 159);
   color: white;
 }
+
 .button3:hover {
-  background-color: rgb(247, 207, 134); 
+  background-color: rgb(247, 207, 134);
   color: white;
 }
+
 .button4:hover {
-  background-color:  rgb(230, 238, 252); 
+  background-color: rgb(230, 238, 252);
   color: white;
 }
 
 
-.button1{
+.button1 {
   width: 200px;
   height: 60px;
   font-size: 30px;
@@ -129,9 +135,9 @@
   transition-duration: 0.4s;
   background-color: white;
   border: 2px solid rgb(247, 218, 223)
-
 }
-.button2{
+
+.button2 {
   width: 200px;
   height: 60px;
   background-color: rgb(210, 244, 159);
@@ -144,7 +150,8 @@
 
 
 }
-.button3{  
+
+.button3 {
   width: 200px;
   height: 60px;
   background-color: rgb(247, 207, 134);
@@ -159,7 +166,8 @@
 
 
 }
-.button4{
+
+.button4 {
   width: 200px;
   height: 60px;
   background-color: rgb(230, 238, 252);
@@ -169,5 +177,39 @@
   transition-duration: 0.4s;
   background-color: white;
   border: 2px solid rgb(230, 238, 252);
-  
+
+}
+
+body {
+  background-color: #d2e1fd;
+}
+
+.grass {
+  width: 120px;
+  height: 100px;
+}
+
+.eater {
+  width: 120px;
+  height: 100px;
+}
+
+.gr {
+  color: #328940;
+}
+
+.gret {
+  color: rgb(212, 131, 174);
+}
+
+.st {
+  color: darkgray;
+}
+
+.fox {
+  color: #d48a36;
+}
+
+.gi {
+  color: darkolivegreen;
 }

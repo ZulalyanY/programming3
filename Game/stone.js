@@ -1,5 +1,5 @@
 var LivingCreature = require("./LivingCreature")
-module.exports = class GrassStone  extends LivingCreature {
+module.exports = class GrassStone extends LivingCreature {
     constructor(x, y) {
         super(x, y)
         this.directions = [

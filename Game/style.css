@@ -3,22 +3,28 @@
   padding: 0;
 }
 
+
 .topnav {
   width: 100%;
   justify-content: flex-start;
-  background: linear-gradient(to bottom right, #a7c0ee 14%, #6abcec 100%);
+  background: linear-gradient(to bottom right, #b3c9f3 14%, #6abcec 100%);
   overflow: hidden;
   display: flex;
 }
 
 .topnav a {
-  margin: 10px 5px 0px 0px;
-  padding: 20px 20px 0px 0px;
   float: left;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
+  padding: 40px 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background: linear-gradient(to bottom right, #C9DBFC 50%, #CCC4F5  90%);
+  color: rgb(76, 57, 248);
+  border-radius: 40%;
 }
 
 header ul {
@@ -76,15 +82,8 @@ input {
   margin: 15px 15px 15px 15px;
 }
 
-.dis {
-  margin: auto;
-  padding: auto;
-  justify-content: flex-end;
-}
 
 footer {
-  display: block;
-  text-align: center;
   padding: 5px;
   background: linear-gradient(to bottom right, #a7c0ee 14%, #44b4f5 100%);
   color: white;
@@ -121,6 +120,11 @@ footer {
 }
 
 .button4:hover {
+  background-color: rgb(230, 238, 252);
+  color: white;
+}
+
+.butt:hover {
   background-color: rgb(230, 238, 252);
   color: white;
 }
@@ -181,7 +185,7 @@ footer {
 }
 
 body {
-  background-color: #d2e1fd;
+  background-color: #e3eaf7;
 }
 
 .grass {
@@ -194,22 +198,67 @@ body {
   height: 100px;
 }
 
-.gr {
+
+h1 {
+
+  color: #3d5f9f;
+  font-size: 50px;
+}
+
+.butt {
+  width: 200px;
+  height: 60px;
+  background-color: rgb(230, 238, 252);
+  font-size: 30px;
+  color: #3d5f9f;
+  border-radius: 30%;
+  transition-duration: 0.4s;
+  background-color: white;
+  border: 2px solid rgb(230, 238, 252);
+}
+
+.info {
+  margin-left: 500px;
+}
+
+table {
+  background-color: black;
+}
+
+tr {
+  background: linear-gradient(to bottom right, #96e4f1 20%, #44b4f5 100%);
+  font-size: 20px;
+}
+
+.nam {
+  font-size: 40px;
+  color: #1d3b74;
+}
+
+.namgr {
   color: #328940;
+  font-size: 40px;
 }
 
-.gret {
-  color: rgb(212, 131, 174);
-}
-
-.st {
-  color: darkgray;
-}
-
-.fox {
+.namfo {
+  font-size: 40px;
   color: #d48a36;
+
 }
 
-.gi {
+.namst {
+  color: darkgray;
+  font-size: 40px;
+}
+
+.namge {
+  font-size: 40px;
   color: darkolivegreen;
+
+}
+
+.namea {
+  font-size: 40px;
+  color: rgb(212, 131, 174);
+
 }

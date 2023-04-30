@@ -4,18 +4,20 @@ module.exports = class GrassGiant extends LivingCreature {
         super(x, y)
         this.directions = [];
     }
+
+
     getNewCoordinates() {
         this.directions = [
             [this.x, this.y + 1]
         ];
     }
 
-    /* chooseCell------------------ */
     chooseCell(character) {
         this.getNewCoordinates()
         return super.chooseCell(character)
 
     }
+    
     clearField() {
         this.multiply++
         var emptyCells = this.chooseCell(0)
@@ -50,6 +52,8 @@ module.exports = class GrassGiant extends LivingCreature {
             this.die()
         }
     }
+
+
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
@@ -65,6 +69,8 @@ module.exports = class GrassGiant extends LivingCreature {
             this.multiply = 0;
         }
     }
+
+
     test() {
         this.multiply++;
         for (let i = 0; i < 1; i++) {
@@ -77,6 +83,8 @@ module.exports = class GrassGiant extends LivingCreature {
             }
         }
     }
+
+    
     die() {
         matrix[this.y][this.x] = 0;
         for (var i in grassGiantArr) {

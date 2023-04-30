@@ -23,7 +23,10 @@
 
 canvas{
   margin-left: 30%;
+  margin-bottom: 30%;
 }
+
+
 .topnav a:hover {
   background: linear-gradient(to bottom right, #C9DBFC 50%, #CCC4F5  90%);
   color: rgb(76, 57, 248);
@@ -100,7 +103,7 @@ footer {
 .buttons {
   margin: 70px;
   display: flex;
-  width: 40%;
+
   justify-content: space-evenly;
   display: flex;
 
@@ -221,19 +224,7 @@ h1 {
   color: #3d5f9f;
   font-size: 50px;
 }
-/* 
-.butt {
-  width: 200px;
-  height: 60px;
-  background-color: rgb(230, 238, 252);
-  font-size: 30px;
-  color: #3d5f9f;
-  border-radius: 30%;
-  transition-duration: 0.4s;
-  background-color: white;
-  border: 2px solid rgb(230, 238, 252);
-}
- */
+
 .info {
   margin-left: 500px;
 }
@@ -243,7 +234,7 @@ table {
 }
 
 tr {
-  background: linear-gradient(to bottom right, #96e4f1 20%, #44b4f5 100%);
+  background: linear-gradient(to bottom right, #d3f6fc 20%, #99cfee 100%);
   font-size: 20px;
 }
 
@@ -277,6 +268,11 @@ tr {
 .namea {
   font-size: 40px;
   color: rgb(212, 131, 174);
+
+}
+.namgretet{
+  font-size: 40px;
+  color: rgb(92, 194, 33);
 
 }
 

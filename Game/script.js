@@ -3,9 +3,6 @@ var side = 28
 
 function setup() {
     createCanvas(20 * side, 20 * side);
-    // background("Shadow");
-
-
 
 }
 
@@ -40,27 +37,26 @@ function nkarel(matrix) {
                 text("🍀", x * side, y * side + tobot)
             }
             else if (matrix[y][x] == 2) {
-                fill("#FFBEB4")
+                fill("#FEE8FF")
                 rect(x * side, y * side, side, side)
                 text("🪱", x * side, y * side + tobot)
             }
             else if (matrix[y][x] == 0) {
                 if (weath == "spring") {
-                    fill("#FCDFFF")
+                    fill("#F8EAED")
                 }
                 else if (weath == "summer") {
                     fill("#DEFFE8")
                 }
                 else if (weath == "autumn") {
-                    fill("pink")
+                    fill("#FFE7C7")
                 }
                 else if (weath == "winter") {
                     fill("#D4FFFF")
                 }
-
                 rect(x * side, y * side, side, side)
-
             }
+
             else if (matrix[y][x] == 3) {
                 fill("#FFA500")
                 rect(x * side, y * side, side, side)
@@ -115,4 +111,18 @@ function spawnGrEater() {
     socket.emit("GrassEater")
 }
 
+function spawnGrEaterEater() {
+    socket.emit("GrEaterEater")
+}
 
+function spawnFox() {
+    socket.emit("Fox")
+}
+
+function spawnStone() {
+    socket.emit("Stone")
+}
+
+function spawnGiant() {
+    socket.emit("Giant")
+}

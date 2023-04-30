@@ -5,6 +5,7 @@ module.exports = class GrassEater extends LivingCreature {
         this.directions = [];
     }
 
+
     getNewCoordinates() {
         this.directions = [
             [this.x - 1, this.y - 1],
@@ -26,12 +27,12 @@ module.exports = class GrassEater extends LivingCreature {
  
 
     move() {
-        let found = super.chooseCell(0);
-        let exact = found[[Math.round(Math.random() * found.length)]]
+        var found = super.chooseCell(0);
+        var exact = found[[Math.round(Math.random() * found.length)]]
 
         if (exact) {
-            let x = exact[0];
-            let y = exact[1];
+            var x = exact[0];
+            var y = exact[1];
 
             matrix[y][x] = 2;
             matrix[this.y][this.x] = 0;
@@ -56,7 +57,7 @@ module.exports = class GrassEater extends LivingCreature {
         var emptyCells = this.chooseCell(0);
         var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
 
-        if (newCell && this.multiply >= 7) {
+        if (newCell && this.multiply >= 9) {
             var newX = newCell[0];
             var newY = newCell[1];
             matrix[newY][newX] = 2;
@@ -67,26 +68,6 @@ module.exports = class GrassEater extends LivingCreature {
         }
     }
 
-/*     move() {
-        this.energy--
-        var emptyCells = this.chooseCell(0)
-        var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
-
-        if (newCell && this.energy >= 0) {
-            var newX = newCell[0]
-            var newY = newCell[1]
-            matrix[newY][newX] = matrix[this.y][this.x]
-            matrix[this.y][this.x] = 0
-            this.x = newX
-            this.y = newY
-        }
-        else {
-            if (this.energy < 0) {
-                this.die()
-            }
-        }
-    }
- */
     eat() {
         var emptyCells = this.chooseCell(1)
         var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
@@ -111,8 +92,10 @@ module.exports = class GrassEater extends LivingCreature {
             this.move()
         }
     }
+
+
     die() {
-        for (let i = 0; i < grassEaterArr.length; i++) {
+        for (var i = 0; i < grassEaterArr.length; i++) {
             if (grassEaterArr[i].x == this.x && grassEaterArr[i].y == this.y) {
                 grassEaterArr.splice(i, 1)
             }

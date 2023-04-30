@@ -23,13 +23,40 @@ module.exports = class GrassEater extends LivingCreature {
         return super.chooseCell(character)
 
     }
+ 
 
+    move() {
+        let found = super.chooseCell(0);
+        let exact = found[[Math.round(Math.random() * found.length)]]
+
+        if (exact) {
+            let x = exact[0];
+            let y = exact[1];
+
+            matrix[y][x] = 2;
+            matrix[this.y][this.x] = 0;
+
+            this.x = x;
+            this.y = y;
+
+            this.energy--;
+
+            if (this.energy < 0) {
+                this.die()
+            }
+        } else {
+            this.energy--;
+            if (this.energy < 0) {
+                this.die()
+            }
+        }
+    }
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
         var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
 
-        if (newCell && this.multiply >= 5) {
+        if (newCell && this.multiply >= 7) {
             var newX = newCell[0];
             var newY = newCell[1];
             matrix[newY][newX] = 2;
@@ -40,7 +67,7 @@ module.exports = class GrassEater extends LivingCreature {
         }
     }
 
-    move() {
+/*     move() {
         this.energy--
         var emptyCells = this.chooseCell(0)
         var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
@@ -59,7 +86,7 @@ module.exports = class GrassEater extends LivingCreature {
             }
         }
     }
-
+ */
     eat() {
         var emptyCells = this.chooseCell(1)
         var newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
@@ -84,14 +111,12 @@ module.exports = class GrassEater extends LivingCreature {
             this.move()
         }
     }
-
     die() {
-        matrix[this.y][this.x] = 0;
-        for (var i in grassEaterArr) {
-            if (this.x == grassEaterArr[i].x && this.y == grassEaterArr[i].y) {
-                grassEaterArr.splice(i, 1);
-                break;
+        for (let i = 0; i < grassEaterArr.length; i++) {
+            if (grassEaterArr[i].x == this.x && grassEaterArr[i].y == this.y) {
+                grassEaterArr.splice(i, 1)
             }
         }
+        matrix[this.y][this.x] = 0;
     }
 }

@@ -21,6 +21,9 @@
   font-size: 17px;
 }
 
+canvas{
+  margin-left: 30%;
+}
 .topnav a:hover {
   background: linear-gradient(to bottom right, #C9DBFC 50%, #CCC4F5  90%);
   color: rgb(76, 57, 248);
@@ -123,6 +126,10 @@ footer {
   background-color: rgb(230, 238, 252);
   color: white;
 }
+.button5:hover {
+  background-color: rgb(238, 243, 102);
+  color: white;
+}
 
 .butt:hover {
   background-color: rgb(230, 238, 252);
@@ -164,11 +171,7 @@ footer {
   border-radius: 30%;
   transition-duration: 0.4s;
   background-color: white;
-
   border: 2px solid rgb(247, 207, 134);
-
-
-
 }
 
 .button4 {
@@ -184,8 +187,22 @@ footer {
 
 }
 
+.button5 {
+  width: 200px;
+  height: 60px;
+  background-color: rgb(251, 251, 238);
+  font-size: 30px;
+  color: #e4f530;
+  border-radius: 30%;
+  transition-duration: 0.4s;
+  background-color: white;
+  border: 2px solid rgb(245, 241, 191);
+
+}
+
 body {
   background-color: #e3eaf7;
+  /* margin: 120px; */
 }
 
 .grass {
@@ -204,7 +221,7 @@ h1 {
   color: #3d5f9f;
   font-size: 50px;
 }
-
+/* 
 .butt {
   width: 200px;
   height: 60px;
@@ -216,7 +233,7 @@ h1 {
   background-color: white;
   border: 2px solid rgb(230, 238, 252);
 }
-
+ */
 .info {
   margin-left: 500px;
 }
@@ -262,3 +279,6 @@ tr {
   color: rgb(212, 131, 174);
 
 }
+
+
+

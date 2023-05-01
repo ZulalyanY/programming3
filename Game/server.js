@@ -188,7 +188,7 @@ function killAll() {
     io.sockets.emit("send matrix", matrix);
 }
 function spawnGrass() {
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 12; i++) {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
@@ -201,7 +201,7 @@ function spawnGrass() {
 }
 
 function spawnGrEater() {
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 2; i++) {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
@@ -219,7 +219,7 @@ function spawnGrEaterEater() {
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
             matrix[y][x] = 1;
-            var eat2 = new GrEaterEater(x, y);
+            var eat2 = new GrassEaterEater(x, y);
             grassEaterEaterArr.push(eat2);
         }
     }

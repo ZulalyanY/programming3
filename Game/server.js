@@ -4,6 +4,7 @@ var server = require("http").Server(app)
 var io = require("socket.io")(server)
 var fs = require("fs")
 
+
 app.use(express.static("."))
 
 app.get("/", function (req, res) {
@@ -99,20 +100,20 @@ function createObject() {
                 var gr = new Grass(x, y)
                 grassArr.push(gr)
             } else if (matrix[y][x] == 2) {
-                var gr = new GrassEater(x, y)
-                grassEaterArr.push(gr)
+                var gret = new GrassEater(x, y)
+                grassEaterArr.push(gret)
             } else if (matrix[y][x] == 3) {
-                var gr = new GrassGiant(x, y)
-                grassGiantArr.push(gr)
+                var gi = new GrassGiant(x, y)
+                grassGiantArr.push(gi)
             } else if (matrix[y][x] == 4) {
-                var gr = new GrassStone(x, y)
-                grassStoneArr.push(gr)
+                var st = new GrassStone(x, y)
+                grassStoneArr.push(st)
             } else if (matrix[y][x] == 5) {
-                var gr = new GrassFox(x, y)
-                grassFoxArr.push(gr)
+                var fo = new GrassFox(x, y)
+                grassFoxArr.push(fo)
             } else if (matrix[y][x] == 6) {
-                var gr = new GrassFox(x, y)
-                grassFoxArr.push(gr)
+                var et2 = new GrassEaterEater(x, y)
+                grassEaterEaterArr.push(et2)
             }
         }
     }
@@ -205,7 +206,7 @@ function spawnGrEater() {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
-            matrix[y][x] = 1;
+            matrix[y][x] = 2;
             var et = new GrassEater(x, y);
             grassEaterArr.push(et);
         }
@@ -214,11 +215,11 @@ function spawnGrEater() {
 }
 
 function spawnGrEaterEater() {
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 5; i++) {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
-            matrix[y][x] = 1;
+            matrix[y][x] = 6;
             var eat2 = new GrassEaterEater(x, y);
             grassEaterEaterArr.push(eat2);
         }
@@ -231,7 +232,7 @@ function spawnFox() {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
-            matrix[y][x] = 5;
+            matrix[y][x] = 3;
             var fox = new GrassFox(x, y);
             grassFoxArr.push(fox);
         }
@@ -245,7 +246,7 @@ function spawnStone() {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
-            matrix[y][x] = 1;
+            matrix[y][x] = 4;
             var st = new GrassStone(x, y);
             grassStoneArr.push(st);
         }
@@ -259,7 +260,7 @@ function spawnGiant() {
         var x = Math.floor(Math.random() * matrix[0].length)
         var y = Math.floor(Math.random() * matrix.length)
         if (matrix[y][x] == 0) {
-            matrix[y][x] = 6;
+            matrix[y][x] = 5;
             var gi = new GrassGiant(x, y);
             grassGiantArr.push(gi);
         }
